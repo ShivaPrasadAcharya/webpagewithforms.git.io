@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsive Navbar</title>
+	<style>
+		/* Navbar styles */
+		.navbar {
+			background-color: #333;
+			overflow: hidden;
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+
+		.navbar a {
+			float: left;
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+		}
+
+		/* Dropdown menu */
+		.dropdown {
+			float: left;
+			overflow: hidden;
+		}
+
+		.dropdown .dropbtn {
+			font-size: 17px;    
+			border: none;
+			outline: none;
+			color: white;
+			padding: 14px 16px;
+			background-color: inherit;
+			font-family: inherit;
+			margin: 0;
+		}
+
+		.navbar a:hover, .dropdown:hover .dropbtn {
+			background-color: #ddd;
+			color: black;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #f9f9f9;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
+
+		.dropdown-content a {
+			float: none;
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+			text-align: left;
+		}
+
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+
+		@media screen and (max-width: 600px) {
+			.navbar a:not(:first-child), .dropdown .dropbtn {
+				display: none;
+			}
+
+			.navbar a.icon {
+				float: right;
+				display: block;
+			}
+		}
+
+		@media screen and (max-width: 600px) {
+			.navbar.responsive {
+				position: relative;
+			}
+
+			.navbar.responsive a.icon {
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+
+			.navbar.responsive a {
+				float: none;
+				display: block;
+				text-align: left;
+			}
+
+			.dropdown.responsive {
+				display: block;
+				float: none;
+			}
+
+			.dropdown-content {
+				position: relative;
+			}
+
+			.dropdown.responsive .dropbtn {
+				display: block;
+				width: 100%;
+				text-align: left;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Navbar -->
+	<div class="navbar" id="myNavbar">
+		<a href="#" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+		<a href="https://shivaprasadacharya.github.io/najirform.git.io/" target="_blank">Jaganath Najir</a>
+		<a href="https://shivaprasadacharya.github.io/quotesform.git.io/" target="_blank"> Baldev Quotes</a>
+		<a href="https://shivaprasadacharya.github.io/phrasesnwordsform.git.io/" target="_blank">Subhadra Phrases</a>
+		<a href="https://shivaprasadacharya.github.io/opnionnnewsform.git.io/" target="_blank"> Chaitanya Op-News</a>
+		<a href="https://shivaprasadacharya.github.io/interviewtips.git.io/" target="_blank"> Nityananda Interview</a>
+		<a href="https://shivaprasadacharya.github.io/inbasket.git.io/" target="_blank"> Advait InBasket</a>
+		<a href="https://shivaprasadacharya.github.io/problemnsolution.git.io/" target="_blank"> Gadadhar ProbSol</a>
+		<a href="https://shivaprasadacharya.github.io/neopragya.git.io/" target="_blank"> Srivash Neopragya</a>
+
+	</div>
+
+	<script>
+		/* Toggle between adding and removing the "responsive" class to the navbar when the user clicks on the icon */
+		function myFunction() {
+			var x = document.getElementById("myNavbar");
+			if (x.className === "navbar") {
+				x.className += " responsive";
+			} else {
+				x.className = "navbar";
+			}
+		}
+	</script>
+
+</body>
+</html>
+
+			
